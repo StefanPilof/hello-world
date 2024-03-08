@@ -1,0 +1,33 @@
+#include <iostream>
+#include "MyGraph.h"
+
+using namespace std;
+
+int main() 
+{   
+  cout<<"Test graph #1"<<endl;
+  MyGraph* graph1 = new MyGraph(5);
+  graph1->rndfill();
+  graph1->print();
+  cout<<"Possible Euler's path:"<<endl;
+  graph1->findpath();
+  graph1->~MyGraph();
+    
+  cout<<endl<<"Test graph #2"<<endl;
+  MyGraph* graph2 = new MyGraph(6);
+  graph2->rndfill();
+  graph2->print();
+  cout<<"Possible Euler's path:"<<endl;
+  graph2->findpath();
+  graph2->~MyGraph();
+    
+  cout<<endl<<"Test graph #3"<<endl;
+  MyGraph* graph3 = new MyGraph(7);
+  graph3->rndfill();
+  graph3->print();
+  cout<<"Possible Euler's path:"<<endl;
+  graph3->findpath();
+	graph3->~MyGraph();
+    
+	return 0;
+}
